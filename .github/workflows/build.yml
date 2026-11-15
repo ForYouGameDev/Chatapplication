@@ -26,6 +26,9 @@ jobs:
       - name: Generate android platform
         run: flutter create . --platforms=android --org com.shadowarc --project-name whatsapp_clone
 
+      - name: Remove default generated test
+        run: rm -rf test
+
       # Release build ke liye INTERNET permission zaroori hai
       - name: Add INTERNET permission
         run: |
